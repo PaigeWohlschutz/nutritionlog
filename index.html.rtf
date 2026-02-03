@@ -1,0 +1,443 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red125\green123\blue133;\red25\green22\blue35;\red255\green255\blue255;
+\red226\green83\blue120;\red166\green205\blue66;\red254\green219\blue112;}
+{\*\expandedcolortbl;;\cssrgb\c56471\c55686\c59216;\cssrgb\c12941\c11765\c18431;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c91765\c42353\c54510;\cssrgb\c70588\c82745\c32549;\cssrgb\c100000\c87843\c51373;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 <html\cf4 \strokec4  \cf6 \strokec6 lang\cf4 \strokec4 =\cf7 \strokec7 "en"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf5 \strokec5 <head>\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 <!-- SECTION: Meta -->\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 <meta\cf4 \strokec4  \cf6 \strokec6 charset\cf4 \strokec4 =\cf7 \strokec7 "UTF-8"\cf4 \strokec4  \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 <meta\cf4 \strokec4  \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "viewport"\cf4 \strokec4  \cf6 \strokec6 content\cf4 \strokec4 =\cf7 \strokec7 "width=device-width, initial-scale=1"\cf4 \strokec4  \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 <title>\cf4 \strokec4 Marathon Fuel Log\cf5 \strokec5 </title>\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 <!-- SECTION: Fonts -->\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 <link\cf4 \strokec4  \cf6 \strokec6 rel\cf4 \strokec4 =\cf7 \strokec7 "preconnect"\cf4 \strokec4  \cf6 \strokec6 href\cf4 \strokec4 =\cf7 \strokec7 "https://fonts.googleapis.com"\cf4 \strokec4  \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 <link\cf4 \strokec4  \cf6 \strokec6 rel\cf4 \strokec4 =\cf7 \strokec7 "preconnect"\cf4 \strokec4  \cf6 \strokec6 href\cf4 \strokec4 =\cf7 \strokec7 "https://fonts.gstatic.com"\cf4 \strokec4  \cf6 \strokec6 crossorigin\cf4 \strokec4  \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 <link\cf4 \cb1 \strokec4 \
+\cb3       \cf6 \strokec6 href\cf4 \strokec4 =\cf7 \strokec7 "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"\cf4 \cb1 \strokec4 \
+\cb3       \cf6 \strokec6 rel\cf4 \strokec4 =\cf7 \strokec7 "stylesheet"\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 <!-- SECTION: Styles -->\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 <link\cf4 \strokec4  \cf6 \strokec6 rel\cf4 \strokec4 =\cf7 \strokec7 "stylesheet"\cf4 \strokec4  \cf6 \strokec6 href\cf4 \strokec4 =\cf7 \strokec7 "style.css"\cf4 \strokec4  \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 </head>\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 <body>\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 <!-- SECTION: App Shell -->\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "app-shell"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 <!-- SECTION: Header -->\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 <header\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "app-header"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "brand"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3           \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "brand-mark"\cf5 \strokec5 >\cf4 \strokec4 42K\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3           \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "brand-text"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <h1\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "app-title"\cf5 \strokec5 >\cf4 \strokec4 Marathon Fuel Log\cf5 \strokec5 </h1>\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <p\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "app-subtitle"\cf5 \strokec5 >\cf4 \strokec4 Track every meal. Coach every mile.\cf5 \strokec5 </p>\cf4 \cb1 \strokec4 \
+\cb3           \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3         \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "header-controls"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3           \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "week-selector"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "weekSelect"\cf5 \strokec5 >\cf4 \strokec4 Week of training\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <select\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "weekSelect"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "current"\cf5 \strokec5 >\cf4 \strokec4 Current week\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "race-week"\cf5 \strokec5 >\cf4 \strokec4 Race week\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "custom"\cf5 \strokec5 >\cf4 \strokec4 Custom block\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 </select>\cf4 \cb1 \strokec4 \
+\cb3           \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3           \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "view-toggle"\cf4 \strokec4  \cf6 \strokec6 role\cf4 \strokec4 =\cf7 \strokec7 "tablist"\cf4 \strokec4  \cf6 \strokec6 aria-label\cf4 \strokec4 =\cf7 \strokec7 "View mode"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <button\cf4 \cb1 \strokec4 \
+\cb3               \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "athleteViewBtn"\cf4 \cb1 \strokec4 \
+\cb3               \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "chip chip-active"\cf4 \cb1 \strokec4 \
+\cb3               \cf6 \strokec6 data-view\cf4 \strokec4 =\cf7 \strokec7 "athlete"\cf4 \cb1 \strokec4 \
+\cb3               \cf6 \strokec6 role\cf4 \strokec4 =\cf7 \strokec7 "tab"\cf4 \cb1 \strokec4 \
+\cb3               \cf6 \strokec6 aria-selected\cf4 \strokec4 =\cf7 \strokec7 "true"\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3               Athlete view\cb1 \
+\cb3             \cf5 \strokec5 </button>\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <button\cf4 \cb1 \strokec4 \
+\cb3               \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachViewBtn"\cf4 \cb1 \strokec4 \
+\cb3               \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "chip"\cf4 \cb1 \strokec4 \
+\cb3               \cf6 \strokec6 data-view\cf4 \strokec4 =\cf7 \strokec7 "coach"\cf4 \cb1 \strokec4 \
+\cb3               \cf6 \strokec6 role\cf4 \strokec4 =\cf7 \strokec7 "tab"\cf4 \cb1 \strokec4 \
+\cb3               \cf6 \strokec6 aria-selected\cf4 \strokec4 =\cf7 \strokec7 "false"\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3               Coach view\cb1 \
+\cb3             \cf5 \strokec5 </button>\cf4 \cb1 \strokec4 \
+\cb3           \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 </header>\cf4 \cb1 \strokec4 \
+\
+\cb3       \cf2 \strokec2 <!-- SECTION: Main Content -->\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 <main\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "app-main"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 <!-- SECTION: Athlete View -->\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 <section\cf4 \cb1 \strokec4 \
+\cb3           \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "athleteView"\cf4 \cb1 \strokec4 \
+\cb3           \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "panel panel-active"\cf4 \cb1 \strokec4 \
+\cb3           \cf6 \strokec6 aria-label\cf4 \strokec4 =\cf7 \strokec7 "Athlete meal logging"\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3           \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "layout-grid"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3             \cf2 \strokec2 <!-- SECTION: Meal Form -->\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <section\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card card-form"\cf4 \strokec4  \cf6 \strokec6 aria-labelledby\cf4 \strokec4 =\cf7 \strokec7 "mealFormHeading"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 <header\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card-header"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <h2\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "mealFormHeading"\cf5 \strokec5 >\cf4 \strokec4 Log a meal\cf5 \strokec5 </h2>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <p\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card-support-text"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   Keep it simple and honest. Your coach sees exactly what you fuel with.\cb1 \
+\cb3                 \cf5 \strokec5 </p>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </header>\cf4 \cb1 \strokec4 \
+\
+\cb3               \cf5 \strokec5 <form\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "mealForm"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meal-form"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 \cf2 \strokec2 <!-- SECTION: Basic Info Row -->\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-row"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "mealDescription"\cf5 \strokec5 >\cf4 \strokec4 Meal description\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <input\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "mealDescription"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "description"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "text"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 autocomplete\cf4 \strokec4 =\cf7 \strokec7 "off"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 placeholder\cf4 \strokec4 =\cf7 \strokec7 "Oatmeal, banana, peanut butter"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 required\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-row"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "mealType"\cf5 \strokec5 >\cf4 \strokec4 Meal type\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <select\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "mealType"\cf4 \strokec4  \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "type"\cf4 \strokec4  \cf6 \strokec6 required\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 ""\cf5 \strokec5 >\cf4 \strokec4 Select\'85\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "breakfast"\cf5 \strokec5 >\cf4 \strokec4 Breakfast\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "pre-run"\cf5 \strokec5 >\cf4 \strokec4 Pre-run\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "post-run"\cf5 \strokec5 >\cf4 \strokec4 Post-run\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "lunch"\cf5 \strokec5 >\cf4 \strokec4 Lunch\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "dinner"\cf5 \strokec5 >\cf4 \strokec4 Dinner\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "snack"\cf5 \strokec5 >\cf4 \strokec4 Snack\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 </select>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "mealTime"\cf5 \strokec5 >\cf4 \strokec4 Time\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <input\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "mealTime"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "time"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "time"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 required\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                 \cf2 \strokec2 <!-- SECTION: Nutrition Row (Canada Food Guide style) -->\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-row"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "foodCategory"\cf5 \strokec5 >\cf4 \strokec4 Food category\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <select\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "foodCategory"\cf4 \strokec4  \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "foodCategory"\cf4 \strokec4  \cf6 \strokec6 required\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 ""\cf5 \strokec5 >\cf4 \strokec4 Select\'85\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "vegetables"\cf5 \strokec5 >\cf4 \strokec4 Vegetables and fruits\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "grains"\cf5 \strokec5 >\cf4 \strokec4 Whole grain foods\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "protein"\cf5 \strokec5 >\cf4 \strokec4 Protein foods\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "mixed"\cf5 \strokec5 >\cf4 \strokec4 Mixed meal (combo)\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 </select>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "portionSize"\cf5 \strokec5 >\cf4 \strokec4 Portion size\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <select\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "portionSize"\cf4 \strokec4  \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "portionSize"\cf4 \strokec4  \cf6 \strokec6 required\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 ""\cf5 \strokec5 >\cf4 \strokec4 Select\'85\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "0.5"\cf5 \strokec5 >\cf4 \strokec4 Half plate / small portion\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "1"\cf5 \strokec5 >\cf4 \strokec4 One plate / standard portion\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "1.5"\cf5 \strokec5 >\cf4 \strokec4 Hearty portion\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "2"\cf5 \strokec5 >\cf4 \strokec4 Two plates / large portion\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 </select>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-row"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "calories"\cf5 \strokec5 >\cf4 \strokec4 Calories (auto)\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <input\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "calories"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "calories"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "number"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 min\cf4 \strokec4 =\cf7 \strokec7 "0"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 inputmode\cf4 \strokec4 =\cf7 \strokec7 "numeric"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 placeholder\cf4 \strokec4 =\cf7 \strokec7 "Estimated from category"\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <small\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-hint"\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "calorieHint"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       Auto-estimated from Canada Food Guide style portions. You can override.\cb1 \
+\cb3                     \cf5 \strokec5 </small>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group macros-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "macro-field"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "carbs"\cf5 \strokec5 >\cf4 \strokec4 Carbs (g)\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <input\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "carbs"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "carbs"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "number"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 min\cf4 \strokec4 =\cf7 \strokec7 "0"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 inputmode\cf4 \strokec4 =\cf7 \strokec7 "numeric"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 placeholder\cf4 \strokec4 =\cf7 \strokec7 "Auto"\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "macro-field"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "protein"\cf5 \strokec5 >\cf4 \strokec4 Protein (g)\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <input\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "protein"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "protein"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "number"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 min\cf4 \strokec4 =\cf7 \strokec7 "0"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 inputmode\cf4 \strokec4 =\cf7 \strokec7 "numeric"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 placeholder\cf4 \strokec4 =\cf7 \strokec7 "Auto"\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "macro-field"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "fat"\cf5 \strokec5 >\cf4 \strokec4 Fat (g)\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <input\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "fat"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "fat"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "number"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 min\cf4 \strokec4 =\cf7 \strokec7 "0"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 inputmode\cf4 \strokec4 =\cf7 \strokec7 "numeric"\cf4 \cb1 \strokec4 \
+\cb3                         \cf6 \strokec6 placeholder\cf4 \strokec4 =\cf7 \strokec7 "Auto"\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                 \cf2 \strokec2 <!-- SECTION: Feel Row -->\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-row"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "feel"\cf5 \strokec5 >\cf4 \strokec4 How did you feel?\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <select\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "feel"\cf4 \strokec4  \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "feel"\cf4 \strokec4  \cf6 \strokec6 required\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 ""\cf5 \strokec5 >\cf4 \strokec4 Select\'85\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "great-energy"\cf5 \strokec5 >\cf4 \strokec4 Great energy\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "steady"\cf5 \strokec5 >\cf4 \strokec4 Steady / normal\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "sluggish"\cf5 \strokec5 >\cf4 \strokec4 Sluggish\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "stomach-issues"\cf5 \strokec5 >\cf4 \strokec4 Stomach issues\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 "cramping"\cf5 \strokec5 >\cf4 \strokec4 Cramping\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 </select>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                 \cf2 \strokec2 <!-- SECTION: Fruit & Veg Varieties -->\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-row"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "varieties"\cf5 \strokec5 >\cf4 \strokec4 Fruit & veg varieties in this meal\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <input\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "varieties"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "varieties"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "text"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 autocomplete\cf4 \strokec4 =\cf7 \strokec7 "off"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 placeholder\cf4 \strokec4 =\cf7 \strokec7 "e.g. banana, blueberries, spinach"\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <small\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-hint"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       List different fruits and vegetables, separated by commas.\cb1 \
+\cb3                     \cf5 \strokec5 </small>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                 \cf2 \strokec2 <!-- SECTION: Linked recipe (optional) -->\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-row"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "mealRecipe"\cf5 \strokec5 >\cf4 \strokec4 Linked recipe (optional)\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <select\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "mealRecipe"\cf4 \strokec4  \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "mealRecipe"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       \cf5 \strokec5 <option\cf4 \strokec4  \cf6 \strokec6 value\cf4 \strokec4 =\cf7 \strokec7 ""\cf5 \strokec5 >\cf4 \strokec4 No recipe\cf5 \strokec5 </option>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 </select>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <small\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-hint"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                       Save recipes in the Recipe library, then link one here when you log a portion.\cb1 \
+\cb3                     \cf5 \strokec5 </small>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-row"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "notes"\cf5 \strokec5 >\cf4 \strokec4 Notes for coach (optional)\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <textarea\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "notes"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "notes"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 rows\cf4 \strokec4 =\cf7 \strokec7 "2"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 placeholder\cf4 \strokec4 =\cf7 \strokec7 "Felt heavy on tempo run, might have been too close to workout."\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 ></textarea>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3                 \cf2 \strokec2 <!-- SECTION: Form Actions -->\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-actions"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <button\cf4 \strokec4  \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "submit"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "btn btn-primary"\cf5 \strokec5 >\cf4 \strokec4 Add meal\cf5 \strokec5 </button>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <button\cf4 \strokec4  \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "reset"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "btn btn-ghost"\cf5 \strokec5 >\cf4 \strokec4 Clear\cf5 \strokec5 </button>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </form>\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 </section>\cf4 \cb1 \strokec4 \
+\
+\cb3             \cf2 \strokec2 <!-- SECTION: Recipe Library -->\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <section\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card card-recipes"\cf4 \strokec4  \cf6 \strokec6 aria-labelledby\cf4 \strokec4 =\cf7 \strokec7 "recipeLibraryHeading"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 <header\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card-header card-header-inline"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <h2\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "recipeLibraryHeading"\cf5 \strokec5 >\cf4 \strokec4 Recipe library\cf5 \strokec5 </h2>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <p\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card-support-text"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     Save go-to meals by URL so you and your coach can reference them.\cb1 \
+\cb3                   \cf5 \strokec5 </p>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </header>\cf4 \cb1 \strokec4 \
+\
+\cb3               \cf5 \strokec5 <form\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "recipeForm"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "recipe-form"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-row"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "recipeName"\cf5 \strokec5 >\cf4 \strokec4 Recipe name\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <input\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "recipeName"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "recipeName"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "text"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 autocomplete\cf4 \strokec4 =\cf7 \strokec7 "off"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 placeholder\cf4 \strokec4 =\cf7 \strokec7 "Overnight oats with berries"\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-row"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "field-group"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <label\cf4 \strokec4  \cf6 \strokec6 for\cf4 \strokec4 =\cf7 \strokec7 "recipeUrl"\cf5 \strokec5 >\cf4 \strokec4 Recipe URL\cf5 \strokec5 </label>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <input\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "recipeUrl"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 name\cf4 \strokec4 =\cf7 \strokec7 "recipeUrl"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "url"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 autocomplete\cf4 \strokec4 =\cf7 \strokec7 "off"\cf4 \cb1 \strokec4 \
+\cb3                       \cf6 \strokec6 placeholder\cf4 \strokec4 =\cf7 \strokec7 "https://example.com/your-recipe"\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 />\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "form-actions"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <button\cf4 \strokec4  \cf6 \strokec6 type\cf4 \strokec4 =\cf7 \strokec7 "submit"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "btn btn-secondary"\cf5 \strokec5 >\cf4 \strokec4 Save recipe\cf5 \strokec5 </button>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </form>\cf4 \cb1 \strokec4 \
+\
+\cb3               \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "recipeEmptyState"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "empty-state"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <p>\cf4 \strokec4 No recipes saved yet. Add a recipe URL to build your library.\cf5 \strokec5 </p>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 <ul\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "recipeList"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "recipe-list"\cf5 \strokec5 ></ul>\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 </section>\cf4 \cb1 \strokec4 \
+\
+\cb3             \cf2 \strokec2 <!-- SECTION: Athlete Log Panel -->\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <section\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card card-log"\cf4 \strokec4  \cf6 \strokec6 aria-labelledby\cf4 \strokec4 =\cf7 \strokec7 "athleteLogHeading"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 <header\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card-header card-header-inline"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <h2\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "athleteLogHeading"\cf5 \strokec5 >\cf4 \strokec4 Todays meals\cf5 \strokec5 </h2>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <p\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card-support-text"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                     Quick snapshot of everything you logged.\cb1 \
+\cb3                   \cf5 \strokec5 </p>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "log-summary"\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "athleteSummary"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "summary-pill"\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "totalMeals"\cf5 \strokec5 >\cf4 \strokec4 0 meals\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "summary-pill"\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "totalCalories"\cf5 \strokec5 >\cf4 \strokec4 0 kcal\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "summary-pill"\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "athleteVarieties"\cf5 \strokec5 >\cf4 \strokec4 0 / 30 varieties\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </header>\cf4 \cb1 \strokec4 \
+\
+\cb3               \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "athleteLogEmpty"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "empty-state"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <p>\cf4 \strokec4 No meals yet. Log your first meal to start your fuel journal.\cf5 \strokec5 </p>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3               \cf5 \strokec5 <ul\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "athleteMealList"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meal-list"\cf4 \strokec4  \cf6 \strokec6 aria-live\cf4 \strokec4 =\cf7 \strokec7 "polite"\cf5 \strokec5 ></ul>\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 </section>\cf4 \cb1 \strokec4 \
+\cb3           \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 </section>\cf4 \cb1 \strokec4 \
+\
+\cb3         \cf2 \strokec2 <!-- SECTION: Coach View -->\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 <section\cf4 \cb1 \strokec4 \
+\cb3           \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachView"\cf4 \cb1 \strokec4 \
+\cb3           \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "panel"\cf4 \cb1 \strokec4 \
+\cb3           \cf6 \strokec6 aria-label\cf4 \strokec4 =\cf7 \strokec7 "Coach review view"\cf4 \cb1 \strokec4 \
+\cb3           \cf6 \strokec6 aria-hidden\cf4 \strokec4 =\cf7 \strokec7 "true"\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3           \cf5 \strokec5 <section\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card card-report"\cf4 \strokec4  \cf6 \strokec6 aria-labelledby\cf4 \strokec4 =\cf7 \strokec7 "coachReportHeading"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <header\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card-header card-header-inline"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 <div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <h2\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachReportHeading"\cf5 \strokec5 >\cf4 \strokec4 Coach report\cf5 \strokec5 </h2>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <p\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "card-support-text"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   Read-only view optimised for sharing, screenshots, or printing to PDF.\cb1 \
+\cb3                 \cf5 \strokec5 </p>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "report-actions"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <button\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "printReportBtn"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "btn btn-secondary"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   Print / Save as PDF\cb1 \
+\cb3                 \cf5 \strokec5 </button>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 </header>\cf4 \cb1 \strokec4 \
+\
+\cb3               \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachReportMeta"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "report-meta"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meta-label"\cf5 \strokec5 >\cf4 \strokec4 Athlete\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meta-value"\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachAthleteName"\cf5 \strokec5 >\cf4 \strokec4 Marathoner\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meta-label"\cf5 \strokec5 >\cf4 \strokec4 Block\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meta-value"\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachBlockLabel"\cf5 \strokec5 >\cf4 \strokec4 Current week\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meta-label"\cf5 \strokec5 >\cf4 \strokec4 Total meals\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meta-value"\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachTotalMeals"\cf5 \strokec5 >\cf4 \strokec4 0\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meta-label"\cf5 \strokec5 >\cf4 \strokec4 Total calories\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meta-value"\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachTotalCalories"\cf5 \strokec5 >\cf4 \strokec4 0 kcal\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <div>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meta-label"\cf5 \strokec5 >\cf4 \strokec4 Fruit & veg varieties (week)\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <span\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "meta-value"\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachVarieties"\cf5 \strokec5 >\cf4 \strokec4 0 / 30\cf5 \strokec5 </span>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\
+\cb3             \cf2 \strokec2 <!-- SECTION: Printable area -->\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 <div\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachPrintableArea"\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "report-body"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 <table\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "report-table"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <thead>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 <tr>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <th>\cf4 \strokec4 Time\cf5 \strokec5 </th>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <th>\cf4 \strokec4 Meal\cf5 \strokec5 </th>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <th>\cf4 \strokec4 Type\cf5 \strokec5 </th>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <th>\cf4 \strokec4 Calories\cf5 \strokec5 </th>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <th>\cf4 \strokec4 Carbs\cf5 \strokec5 </th>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <th>\cf4 \strokec4 Protein\cf5 \strokec5 </th>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <th>\cf4 \strokec4 Fat\cf5 \strokec5 </th>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <th>\cf4 \strokec4 Felt\cf5 \strokec5 </th>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <th>\cf4 \strokec4 Recipe\cf5 \strokec5 </th>\cf4 \cb1 \strokec4 \
+\cb3                     \cf5 \strokec5 <th>\cf4 \strokec4 Athlete notes\cf5 \strokec5 </th>\cf4 \cb1 \strokec4 \
+\cb3                   \cf5 \strokec5 </tr>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </thead>\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 <tbody\cf4 \strokec4  \cf6 \strokec6 id\cf4 \strokec4 =\cf7 \strokec7 "coachMealTableBody"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                   \cf2 \strokec2 <!-- Filled by JS -->\cf4 \cb1 \strokec4 \
+\cb3                 \cf5 \strokec5 </tbody>\cf4 \cb1 \strokec4 \
+\cb3               \cf5 \strokec5 </table>\cf4 \cb1 \strokec4 \
+\
+\cb3               \cf5 \strokec5 <p\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "print-tip"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3                 Tip: Use your browsers Print option and choose Save as PDF to download this report.\cb1 \
+\cb3               \cf5 \strokec5 </p>\cf4 \cb1 \strokec4 \
+\cb3             \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\cb3           \cf5 \strokec5 </section>\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 </section>\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 </main>\cf4 \cb1 \strokec4 \
+\
+\cb3       \cf2 \strokec2 <!-- SECTION: Footer -->\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 <footer\cf4 \strokec4  \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 "app-footer"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 <p>\cf4 \cb1 \strokec4 \
+\cb3           Built for marathon training: fuel, log, review, repeat.\cb1 \
+\cb3         \cf5 \strokec5 </p>\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 </footer>\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 </div>\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 <!-- SECTION: Scripts -->\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 <script\cf4 \strokec4  \cf6 \strokec6 src\cf4 \strokec4 =\cf7 \strokec7 "script.js"\cf5 \strokec5 ></script>\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 </body>\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 </html>\cf4 \cb1 \strokec4 \
+\
+}
