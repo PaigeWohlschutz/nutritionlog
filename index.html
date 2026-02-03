@@ -70,6 +70,7 @@
           id="athleteView"
           class="panel panel-active"
           aria-label="Athlete meal logging"
+          aria-hidden="false"
         >
           <div class="layout-grid">
             <!-- SECTION: Meal Form -->
@@ -84,7 +85,7 @@
               <form id="mealForm" class="meal-form">
                 <!-- SECTION: Basic Info Row -->
                 <div class="form-row">
-                  <div class="field-group">
+                  <div class="field-group meal-description-group">
                     <label for="mealDescription">Meal description</label>
                     <input
                       id="mealDescription"
@@ -94,6 +95,7 @@
                       placeholder="Oatmeal, banana, peanut butter"
                       required
                     />
+                    <ul id="mealDescriptionSuggestions" class="suggestions-list" aria-label="Recipe suggestions" aria-live="polite"></ul>
                   </div>
                 </div>
 
@@ -147,55 +149,62 @@
                   </div>
                 </div>
 
+                <!-- SECTION: Auto nutrition (calories & macros) -->
                 <div class="form-row">
-                  <div class="field-group">
-                    <label for="calories">Calories (auto)</label>
-                    <input
-                      id="calories"
-                      name="calories"
-                      type="number"
-                      min="0"
-                      inputmode="numeric"
-                      placeholder="Estimated from category"
-                    />
-                    <small class="field-hint" id="calorieHint">
-                      Auto-estimated from Canada Food Guide style portions. You can override.
-                    </small>
-                  </div>
+                  <div class="field-group field-group-full">
+                    <span class="field-group-label">Estimated nutrition (auto)</span>
+                    <p class="field-hint">
+                      Based on Canada Food Guide style portions. These values auto-fill; you can override any of them.
+                    </p>
 
-                  <div class="field-group macros-group">
-                    <div class="macro-field">
-                      <label for="carbs">Carbs (g)</label>
-                      <input
-                        id="carbs"
-                        name="carbs"
-                        type="number"
-                        min="0"
-                        inputmode="numeric"
-                        placeholder="Auto"
-                      />
-                    </div>
-                    <div class="macro-field">
-                      <label for="protein">Protein (g)</label>
-                      <input
-                        id="protein"
-                        name="protein"
-                        type="number"
-                        min="0"
-                        inputmode="numeric"
-                        placeholder="Auto"
-                      />
-                    </div>
-                    <div class="macro-field">
-                      <label for="fat">Fat (g)</label>
-                      <input
-                        id="fat"
-                        name="fat"
-                        type="number"
-                        min="0"
-                        inputmode="numeric"
-                        placeholder="Auto"
-                      />
+                    <div class="auto-nutrition-grid">
+                      <div class="field-group">
+                        <label for="calories">Calories (auto)</label>
+                        <input
+                          id="calories"
+                          name="calories"
+                          type="number"
+                          min="0"
+                          inputmode="numeric"
+                          placeholder="Estimated from category"
+                        />
+                      </div>
+
+                      <div class="field-group macros-group">
+                        <div class="macro-field">
+                          <label for="carbs">Carbs (g)</label>
+                          <input
+                            id="carbs"
+                            name="carbs"
+                            type="number"
+                            min="0"
+                            inputmode="numeric"
+                            placeholder="Auto"
+                          />
+                        </div>
+                        <div class="macro-field">
+                          <label for="protein">Protein (g)</label>
+                          <input
+                            id="protein"
+                            name="protein"
+                            type="number"
+                            min="0"
+                            inputmode="numeric"
+                            placeholder="Auto"
+                          />
+                        </div>
+                        <div class="macro-field">
+                          <label for="fat">Fat (g)</label>
+                          <input
+                            id="fat"
+                            name="fat"
+                            type="number"
+                            min="0"
+                            inputmode="numeric"
+                            placeholder="Auto"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -203,8 +212,8 @@
                 <!-- SECTION: Feel Row -->
                 <div class="form-row">
                   <div class="field-group">
-                    <label for="feel">How did you feel?</label>
-                    <select id="feel" name="feel" required>
+                    <label for="feel">How did you feel? (optional)</label>
+                    <select id="feel" name="feel">
                       <option value="">Select…</option>
                       <option value="great-energy">Great energy</option>
                       <option value="steady">Steady / normal</option>
