@@ -3,7 +3,7 @@ let meals = [];
 let recipes = [];
 let weeklyVarieties = new Set();
 const WEEKLY_VARIETY_GOAL = 30;
-c
+
 // SECTION: DOM Refs
 const athleteViewBtn = document.getElementById('athleteViewBtn');
 const coachViewBtn = document.getElementById('coachViewBtn');
@@ -11,6 +11,8 @@ const athleteView = document.getElementById('athleteView');
 const coachView = document.getElementById('coachView');
 
 const mealForm = document.getElementById('mealForm');
+const mealDescriptionInput = document.getElementById('mealDescription');
+const mealDescriptionSuggestions = document.getElementById('mealDescriptionSuggestions');
 const recipeForm = document.getElementById('recipeForm');
 const weekSelect = document.getElementById('weekSelect');
 
@@ -113,18 +115,13 @@ function renderRecipeLibrary() {
     const li = document.createElement('li');
     li.className = 'recipe-item';
 
-    const name = document.createElement('div');
-    name.className = 'recipe-name';
-    name.textContent = recipe.name;
-
     const link = document.createElement('a');
     link.href = recipe.url;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.textContent = 'Open';
-    link.className = 'recipe-link';
+    link.textContent = recipe.name;
+    link.className = 'recipe-name-link';
 
-    li.appendChild(name);
     li.appendChild(link);
     recipeList.appendChild(li);
   });
@@ -356,6 +353,58 @@ function renderCoachView() {
 }
 
 // SECTION: Event Handlers
+// Meal description → recipe suggestions
+if (mealDescriptionInput && mealDescriptionSuggestions) {
+  mealDescriptionInput.addEventListener('input', () => {
+    const query = mealDescriptionInput.value.trim().toLowerCase();
+
+    // Clear suggestions when query is short or no recipes
+    if (!query || recipes.length === 0) {
+      mealDescriptionSuggestions.innerHTML = '';
+      mealDescriptionSuggestions.hidden = true;
+      return;
+    }
+
+    const matches = recipes.filter((recipe) =>
+      recipe.name.toLowerCase().includes(query)
+    );
+
+    mealDescriptionSuggestions.innerHTML = '';
+
+    if (!matches.length) {
+      mealDescriptionSuggestions.hidden = true;
+      return;
+    }
+
+    matches.forEach((recipe) => {
+      const li = document.createElement('li');
+      li.className = 'suggestion-item';
+      li.textContent = recipe.name;
+      li.addEventListener('click', () => {
+        mealDescriptionInput.value = recipe.name;
+        // If there is a linked recipe select, sync it
+        if (mealRecipeSelect) {
+          mealRecipeSelect.value = recipe.id;
+        }
+        mealDescriptionSuggestions.innerHTML = '';
+        mealDescriptionSuggestions.hidden = true;
+      });
+      mealDescriptionSuggestions.appendChild(li);
+    });
+
+    mealDescriptionSuggestions.hidden = false;
+  });
+
+  // Hide suggestions when input loses focus (with small delay to allow click)
+  mealDescriptionInput.addEventListener('blur', () => {
+    setTimeout(() => {
+      mealDescriptionSuggestions.innerHTML = '';
+      mealDescriptionSuggestions.hidden = true;
+    }, 150);
+  });
+}
+
+
 if (recipeForm) {
   recipeForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -365,6 +414,7 @@ if (recipeForm) {
     const urlRaw = (formData.get('recipeUrl') || '').toString().trim();
 
     if (!nameRaw || !urlRaw) {
+      alert('Please enter both a recipe name and a valid URL.');
       return;
     }
 
@@ -396,10 +446,10 @@ if (mealForm) {
     const carbsRaw = formData.get('carbs');
     const proteinRaw = formData.get('protein');
     const fatRaw = formData.get('fat');
-    const feel = formData.get('feel');
-    const notes = formData.get('notes').trim();
-
-    if (!description || !type || !time || !feel || !category || !portionSize) {
+    const feel = (formData.get('feel') || '').toString();
+    const notes = (formData.get('notes') || '').toString().trim();
+ 
+    if (!description || !type || !time || !category || !portionSize) {
       return;
     }
 
@@ -462,7 +512,11 @@ if (athleteViewBtn && coachViewBtn) {
     athleteView.classList.add('panel-active');
     coachView.classList.remove('panel-active');
 
+    athleteView.setAttribute('aria-hidden', 'false');
     coachView.setAttribute('aria-hidden', 'true');
+
+    athleteViewBtn.setAttribute('aria-selected', 'true');
+    coachViewBtn.setAttribute('aria-selected', 'false');
   });
 
   coachViewBtn.addEventListener('click', () => {
@@ -473,6 +527,10 @@ if (athleteViewBtn && coachViewBtn) {
     athleteView.classList.remove('panel-active');
 
     coachView.setAttribute('aria-hidden', 'false');
+    athleteView.setAttribute('aria-hidden', 'true');
+
+    coachViewBtn.setAttribute('aria-selected', 'true');
+    athleteViewBtn.setAttribute('aria-selected', 'false');
   });
 }
 
