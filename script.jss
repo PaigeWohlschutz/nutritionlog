@@ -503,8 +503,8 @@ if (mealForm) {
   });
 }
 
-// View toggle
-if (athleteViewBtn && coachViewBtn) {
+// View toggle (defensive: ensure panels exist before toggling)
+if (athleteViewBtn && coachViewBtn && athleteView && coachView) {
   athleteViewBtn.addEventListener('click', () => {
     athleteViewBtn.classList.add('chip-active');
     coachViewBtn.classList.remove('chip-active');
@@ -531,6 +531,13 @@ if (athleteViewBtn && coachViewBtn) {
 
     coachViewBtn.setAttribute('aria-selected', 'true');
     athleteViewBtn.setAttribute('aria-selected', 'false');
+
+    // Ensure coach view content is up to date when toggled on
+    try {
+      renderCoachView();
+    } catch (e) {
+      console.error('Error rendering coach view on toggle:', e);
+    }
   });
 }
 
@@ -549,7 +556,27 @@ if (printReportBtn) {
   });
 }
 
-// Initial render
-renderRecipeLibrary();
-renderAthleteView();
-renderCoachView();
+// Initial render (defensive checks for GitHub deployment / Safari)
+if (typeof renderRecipeLibrary === 'function') {
+  try {
+    renderRecipeLibrary();
+  } catch (e) {
+    console.error('Error rendering recipe library:', e);
+  }
+}
+
+if (typeof renderAthleteView === 'function') {
+  try {
+    renderAthleteView();
+  } catch (e) {
+    console.error('Error rendering athlete view:', e);
+  }
+}
+
+if (typeof renderCoachView === 'function') {
+  try {
+    renderCoachView();
+  } catch (e) {
+    console.error('Error rendering coach view:', e);
+  }
+}
