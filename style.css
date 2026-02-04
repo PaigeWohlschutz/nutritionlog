@@ -666,15 +666,6 @@ textarea {
   }
 }
 
-.recipe-name-link {
-  color: var(--color-text-main);
-  text-decoration: none;
-}
-
-.recipe-name-link:hover,
-.recipe-name-link:focus {
-  text-decoration: underline;
-}
 
 /* SECTION: Coach View */
 .card-report {
