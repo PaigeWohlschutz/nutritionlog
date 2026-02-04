@@ -127,7 +127,7 @@
                 <!-- SECTION: Nutrition Row (Canada Food Guide style) -->
                 <div class="form-row">
                   <div class="field-group">
-                    <label for="foodCategory">Food category</label>
+                     <label for="foodCategory">Food category (for your notes)</label>
                     <select id="foodCategory" name="foodCategory" required>
                       <option value="">Select…</option>
                       <option value="vegetables">Vegetables and fruits</option>
@@ -154,7 +154,7 @@
                   <div class="field-group field-group-full">
                     <span class="field-group-label">Estimated nutrition (auto)</span>
                     <p class="field-hint">
-                      Based on Canada Food Guide style portions. These values auto-fill; you can override any of them.
+                       Pulled automatically from nutrition data based on your meal description. You can override any value.
                     </p>
 
                     <div class="auto-nutrition-grid">
@@ -241,20 +241,8 @@
                   </div>
                 </div>
 
-                <!-- SECTION: Linked recipe (optional) -->
-                <div class="form-row">
-                  <div class="field-group">
-                    <label for="mealRecipe">Linked recipe (optional)</label>
-                    <select id="mealRecipe" name="mealRecipe">
-                      <option value="">No recipe</option>
-                    </select>
-                    <small class="field-hint">
-                      Save recipes in the Recipe library, then link one here when you log a portion.
-                    </small>
-                  </div>
-                </div>
+                 <div class="form-row">
 
-                <div class="form-row">
                   <div class="field-group">
                     <label for="notes">Notes for coach (optional)</label>
                     <textarea
@@ -274,58 +262,12 @@
               </form>
             </section>
 
-            <!-- SECTION: Recipe Library -->
-            <section class="card card-recipes" aria-labelledby="recipeLibraryHeading">
-              <header class="card-header card-header-inline">
-                <div>
-                  <h2 id="recipeLibraryHeading">Recipe library</h2>
-                  <p class="card-support-text">
-                    Save go-to meals by URL so you and your coach can reference them.
-                  </p>
-                </div>
-              </header>
-
-              <form id="recipeForm" class="recipe-form">
-                <div class="form-row">
-                  <div class="field-group">
-                    <label for="recipeName">Recipe name</label>
-                    <input
-                      id="recipeName"
-                      name="recipeName"
-                      type="text"
-                      autocomplete="off"
-                      placeholder="Overnight oats with berries"
-                    />
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="field-group">
-                    <label for="recipeUrl">Recipe URL</label>
-                    <input
-                      id="recipeUrl"
-                      name="recipeUrl"
-                      type="url"
-                      autocomplete="off"
-                      placeholder="https://example.com/your-recipe"
-                    />
-                  </div>
-                </div>
-                <div class="form-actions">
-                  <button type="submit" class="btn btn-secondary">Save recipe</button>
-                </div>
-              </form>
-
-              <div id="recipeEmptyState" class="empty-state">
-                <p>No recipes saved yet. Add a recipe URL to build your library.</p>
-              </div>
-              <ul id="recipeList" class="recipe-list"></ul>
-            </section>
-
             <!-- SECTION: Athlete Log Panel -->
+
             <section class="card card-log" aria-labelledby="athleteLogHeading">
               <header class="card-header card-header-inline">
                 <div>
-                  <h2 id="athleteLogHeading">Todays meals</h2>
+                  <h2 id="athleteLogHeading">Todays meals</h2>
                   <p class="card-support-text">
                     Quick snapshot of everything you logged.
                   </p>
@@ -405,8 +347,7 @@
                     <th>Protein</th>
                     <th>Fat</th>
                     <th>Felt</th>
-                    <th>Recipe</th>
-                    <th>Athlete notes</th>
+                     <th>Athlete notes</th>
                   </tr>
                 </thead>
                 <tbody id="coachMealTableBody">
