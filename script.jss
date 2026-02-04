@@ -1,6 +1,5 @@
 // SECTION: State
 let meals = [];
-let recipes = [];
 let weeklyVarieties = new Set();
 const WEEKLY_VARIETY_GOAL = 30;
 
@@ -13,13 +12,9 @@ const coachView = document.getElementById('coachView');
 const mealForm = document.getElementById('mealForm');
 const mealDescriptionInput = document.getElementById('mealDescription');
 const mealDescriptionSuggestions = document.getElementById('mealDescriptionSuggestions');
-const recipeForm = document.getElementById('recipeForm');
 const weekSelect = document.getElementById('weekSelect');
 
 const athleteMealList = document.getElementById('athleteMealList');
-const recipeList = document.getElementById('recipeList');
-const recipeEmptyState = document.getElementById('recipeEmptyState');
-const mealRecipeSelect = document.getElementById('mealRecipe');
 const athleteLogEmpty = document.getElementById('athleteLogEmpty');
 const totalMealsSpan = document.getElementById('totalMeals');
 const totalCaloriesSpan = document.getElementById('totalCalories');
@@ -52,88 +47,45 @@ function formatFeel(value) {
   return map[value] || value || '';
 }
 
-// Simple Canada Food Guide style estimates per "plate" portion
-// Values are rough training-friendly averages, not clinical nutrition data.
-const CFG_ESTIMATES = {
-  vegetables: {
-    calories: 80,
-    carbs: 18,
-    protein: 3,
-    fat: 0,
-  },
-  grains: {
-    calories: 250,
-    carbs: 50,
-    protein: 9,
-    fat: 3,
-  },
-  protein: {
-    calories: 220,
-    carbs: 5,
-    protein: 30,
-    fat: 8,
-  },
-  mixed: {
-    calories: 450,
-    carbs: 55,
-    protein: 22,
-    fat: 14,
-  },
-};
+// Nutrition API config
+const NUTRITION_API_KEY = 'nzOFZY//JUeBXzKi6/NJ1w==ObfVXfCMvL8disMD';
+const NUTRITION_API_URL = 'https://api.api-ninjas.com/v1/nutrition?query=';
 
-function estimateNutritionFromGuide(category, portionMultiplier) {
-  const base = CFG_ESTIMATES[category];
-  if (!base || !portionMultiplier) return null;
+async function fetchNutritionForDescription(description) {
+  if (!description) return null;
 
-  const factor = Number(portionMultiplier) || 0;
-  if (!factor) return null;
+  try {
+    const response = await fetch(
+      `${NUTRITION_API_URL}${encodeURIComponent(description)}`,
+      {
+        headers: {
+          'X-Api-Key': NUTRITION_API_KEY,
+        },
+      }
+    );
 
-  return {
-    calories: Math.round(base.calories * factor),
-    carbs: Math.round(base.carbs * factor),
-    protein: Math.round(base.protein * factor),
-    fat: Math.round(base.fat * factor),
-  };
-}
-
-function renderRecipeLibrary() {
-  if (!recipeList || !recipeEmptyState) return;
-
-  if (!recipes.length) {
-    recipeEmptyState.hidden = false;
-    recipeList.innerHTML = '';
-    if (mealRecipeSelect) {
-      mealRecipeSelect.innerHTML = '<option value="">No recipe</option>';
+    if (!response.ok) {
+      console.error('Nutrition API error:', response.status, response.statusText);
+      return null;
     }
-    return;
-  }
 
-  recipeEmptyState.hidden = true;
-  recipeList.innerHTML = '';
+    const data = await response.json();
+    if (!Array.isArray(data) || !data.length) return null;
 
-  recipes.forEach((recipe) => {
-    const li = document.createElement('li');
-    li.className = 'recipe-item';
-
-    const link = document.createElement('a');
-    link.href = recipe.url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.textContent = recipe.name;
-    link.className = 'recipe-name-link';
-
-    li.appendChild(link);
-    recipeList.appendChild(li);
-  });
-
-  if (mealRecipeSelect) {
-    mealRecipeSelect.innerHTML = '<option value="">No recipe</option>';
-    recipes.forEach((recipe) => {
-      const option = document.createElement('option');
-      option.value = recipe.id;
-      option.textContent = recipe.name;
-      mealRecipeSelect.appendChild(option);
-    });
+    // Sum over all returned items
+    return data.reduce(
+      (acc, item) => {
+        acc.calories += Number(item.calories) || 0;
+        acc.carbs += Number(item.carbohydrates_total_g) || 0;
+        acc.protein += Number(item.protein_g) || 0;
+        acc.fat += Number(item.fat_total_g) || 0;
+        return acc;
+      },
+      { calories: 0, carbs: 0, protein: 0, fat: 0 }
+    );
+  } catch (error) {
+    console.error('Nutrition API request failed:', error);
+    return null;
   }
 }
 
@@ -231,25 +183,6 @@ function renderAthleteView() {
     notes.className = 'meal-notes';
     notes.textContent = meal.notes || '';
 
-    // Linked recipe pill
-    if (meal.recipeId) {
-      const recipe = recipes.find((r) => r.id === meal.recipeId);
-      if (recipe) {
-        const recipeRow = document.createElement('div');
-        recipeRow.className = 'meal-recipe-row';
-
-        const link = document.createElement('a');
-        link.href = recipe.url;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.className = 'macro-pill recipe-pill';
-        link.textContent = recipe.name;
-
-        recipeRow.appendChild(link);
-        main.appendChild(recipeRow);
-      }
-    }
-
     main.appendChild(titleRow);
     main.appendChild(macrosRow);
     main.appendChild(feelRow);
@@ -311,19 +244,6 @@ function renderCoachView() {
     const feelCell = document.createElement('td');
     feelCell.textContent = formatFeel(meal.feel);
 
-    const recipeCell = document.createElement('td');
-    if (meal.recipeId) {
-      const recipe = recipes.find((r) => r.id === meal.recipeId);
-      if (recipe) {
-        const link = document.createElement('a');
-        link.href = recipe.url;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.textContent = recipe.name;
-        recipeCell.appendChild(link);
-      }
-    }
-
     const notesCell = document.createElement('td');
     notesCell.textContent = meal.notes || '';
 
@@ -339,7 +259,6 @@ function renderCoachView() {
     row.appendChild(proteinCell);
     row.appendChild(fatCell);
     row.appendChild(feelCell);
-    row.appendChild(recipeCell);
     row.appendChild(notesCell);
 
     coachMealTableBody.appendChild(row);
@@ -353,85 +272,8 @@ function renderCoachView() {
 }
 
 // SECTION: Event Handlers
-// Meal description → recipe suggestions
-if (mealDescriptionInput && mealDescriptionSuggestions) {
-  mealDescriptionInput.addEventListener('input', () => {
-    const query = mealDescriptionInput.value.trim().toLowerCase();
-
-    // Clear suggestions when query is short or no recipes
-    if (!query || recipes.length === 0) {
-      mealDescriptionSuggestions.innerHTML = '';
-      mealDescriptionSuggestions.hidden = true;
-      return;
-    }
-
-    const matches = recipes.filter((recipe) =>
-      recipe.name.toLowerCase().includes(query)
-    );
-
-    mealDescriptionSuggestions.innerHTML = '';
-
-    if (!matches.length) {
-      mealDescriptionSuggestions.hidden = true;
-      return;
-    }
-
-    matches.forEach((recipe) => {
-      const li = document.createElement('li');
-      li.className = 'suggestion-item';
-      li.textContent = recipe.name;
-      li.addEventListener('click', () => {
-        mealDescriptionInput.value = recipe.name;
-        // If there is a linked recipe select, sync it
-        if (mealRecipeSelect) {
-          mealRecipeSelect.value = recipe.id;
-        }
-        mealDescriptionSuggestions.innerHTML = '';
-        mealDescriptionSuggestions.hidden = true;
-      });
-      mealDescriptionSuggestions.appendChild(li);
-    });
-
-    mealDescriptionSuggestions.hidden = false;
-  });
-
-  // Hide suggestions when input loses focus (with small delay to allow click)
-  mealDescriptionInput.addEventListener('blur', () => {
-    setTimeout(() => {
-      mealDescriptionSuggestions.innerHTML = '';
-      mealDescriptionSuggestions.hidden = true;
-    }, 150);
-  });
-}
-
-
-if (recipeForm) {
-  recipeForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(recipeForm);
-    const nameRaw = (formData.get('recipeName') || '').toString().trim();
-    const urlRaw = (formData.get('recipeUrl') || '').toString().trim();
-
-    if (!nameRaw || !urlRaw) {
-      alert('Please enter both a recipe name and a valid URL.');
-      return;
-    }
-
-    const recipe = {
-      id: `r_${Date.now()}_${Math.random().toString(16).slice(2)}`,
-      name: nameRaw,
-      url: urlRaw,
-    };
-
-    recipes.push(recipe);
-    recipeForm.reset();
-    renderRecipeLibrary();
-  });
-}
-
 if (mealForm) {
-  mealForm.addEventListener('submit', (event) => {
+  mealForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const formData = new FormData(mealForm);
@@ -441,7 +283,6 @@ if (mealForm) {
     const category = formData.get('foodCategory');
     const portionSize = formData.get('portionSize');
     const varietiesRaw = formData.get('varieties') || '';
-    const recipeId = formData.get('mealRecipe') || '';
     const caloriesRaw = formData.get('calories');
     const carbsRaw = formData.get('carbs');
     const proteinRaw = formData.get('protein');
@@ -453,21 +294,29 @@ if (mealForm) {
       return;
     }
 
-    // Auto-estimate from Canada Food Guide style rules
-    const estimate = estimateNutritionFromGuide(category, portionSize);
+    // Try to fetch nutrition from API based on description
+    const apiEstimate = await fetchNutritionForDescription(description);
 
     const calories = caloriesRaw
       ? Number(caloriesRaw)
-      : estimate
-      ? estimate.calories
+      : apiEstimate
+      ? Math.round(apiEstimate.calories)
       : null;
-    const carbs = carbsRaw ? Number(carbsRaw) : estimate ? estimate.carbs : null;
+    const carbs = carbsRaw
+      ? Number(carbsRaw)
+      : apiEstimate
+      ? Math.round(apiEstimate.carbs)
+      : null;
     const protein = proteinRaw
       ? Number(proteinRaw)
-      : estimate
-      ? estimate.protein
+      : apiEstimate
+      ? Math.round(apiEstimate.protein)
       : null;
-    const fat = fatRaw ? Number(fatRaw) : estimate ? estimate.fat : null;
+    const fat = fatRaw
+      ? Number(fatRaw)
+      : apiEstimate
+      ? Math.round(apiEstimate.fat)
+      : null;
 
     const varieties = varietiesRaw
       .split(',')
@@ -481,14 +330,13 @@ if (mealForm) {
       category,
       portionSize: Number(portionSize),
       varieties,
-      recipeId: recipeId || null,
       calories,
       carbs,
       protein,
       fat,
       feel,
       notes,
-      estimated: Boolean(estimate && !caloriesRaw && !carbsRaw && !proteinRaw && !fatRaw),
+      estimated: Boolean(apiEstimate && !caloriesRaw && !carbsRaw && !proteinRaw && !fatRaw),
     };
 
     meals.push(meal);
@@ -557,14 +405,6 @@ if (printReportBtn) {
 }
 
 // Initial render (defensive checks for GitHub deployment / Safari)
-if (typeof renderRecipeLibrary === 'function') {
-  try {
-    renderRecipeLibrary();
-  } catch (e) {
-    console.error('Error rendering recipe library:', e);
-  }
-}
-
 if (typeof renderAthleteView === 'function') {
   try {
     renderAthleteView();
